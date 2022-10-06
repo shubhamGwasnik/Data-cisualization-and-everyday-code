@@ -12,3 +12,16 @@ def plot(df,window_length):
             f.write(fig.to_html())
     except Exception as e:
         print(e)
+
+
+
+### creating sliding windows on a list of numbers with fixed length
+
+
+windows=[]
+for i in range(0,len(p_signal)):
+    window=p_signal[i:i+length]
+    if len(window)<length:
+        break
+    else:
+        windows.append(window)
